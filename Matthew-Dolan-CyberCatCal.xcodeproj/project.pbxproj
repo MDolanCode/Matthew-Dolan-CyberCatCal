@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C92D4793269A2E9400236276 /* Time in Frameworks */ = {isa = PBXBuildFile; productRef = C92D4792269A2E9400236276 /* Time */; };
+		C92D4798269A5B7D00236276 /* CatCalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92D4796269A5B7D00236276 /* CatCalTableViewCell.swift */; };
+		C92D4799269A5B7D00236276 /* CatCalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C92D4797269A5B7D00236276 /* CatCalTableViewCell.xib */; };
 		C9533BAE2698E8FD0058B0CF /* CyberCatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9533BAD2698E8FD0058B0CF /* CyberCatData.swift */; };
 		C9533BB52698EA0C0058B0CF /* CyberCatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9533BB42698EA0C0058B0CF /* CyberCatManager.swift */; };
 		C976F8BE2697C7110068CC8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C976F8BD2697C7110068CC8D /* AppDelegate.swift */; };
@@ -18,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C92D4796269A5B7D00236276 /* CatCalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCalTableViewCell.swift; sourceTree = "<group>"; };
+		C92D4797269A5B7D00236276 /* CatCalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatCalTableViewCell.xib; sourceTree = "<group>"; };
 		C9533BAD2698E8FD0058B0CF /* CyberCatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyberCatData.swift; sourceTree = "<group>"; };
 		C9533BB42698EA0C0058B0CF /* CyberCatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyberCatManager.swift; sourceTree = "<group>"; };
 		C976F8BA2697C7110068CC8D /* Matthew-Dolan-CyberCatCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Matthew-Dolan-CyberCatCal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92D4793269A2E9400236276 /* Time in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				C976F8C32697C7110068CC8D /* Main.storyboard */,
+				C92D4796269A5B7D00236276 /* CatCalTableViewCell.swift */,
+				C92D4797269A5B7D00236276 /* CatCalTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,6 +121,9 @@
 			dependencies = (
 			);
 			name = "Matthew-Dolan-CyberCatCal";
+			packageProductDependencies = (
+				C92D4792269A2E9400236276 /* Time */,
+			);
 			productName = "Matthew-Dolan-CyberCatCal";
 			productReference = C976F8BA2697C7110068CC8D /* Matthew-Dolan-CyberCatCal.app */;
 			productType = "com.apple.product-type.application";
@@ -140,6 +151,9 @@
 				Base,
 			);
 			mainGroup = C976F8B12697C7110068CC8D;
+			packageReferences = (
+				C92D4791269A2E9400236276 /* XCRemoteSwiftPackageReference "time" */,
+			);
 			productRefGroup = C976F8BB2697C7110068CC8D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -157,6 +171,7 @@
 				C976F8CA2697C7140068CC8D /* LaunchScreen.storyboard in Resources */,
 				C976F8C72697C7140068CC8D /* Assets.xcassets in Resources */,
 				C976F8C52697C7110068CC8D /* Main.storyboard in Resources */,
+				C92D4799269A5B7D00236276 /* CatCalTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9533BB52698EA0C0058B0CF /* CyberCatManager.swift in Sources */,
+				C92D4798269A5B7D00236276 /* CatCalTableViewCell.swift in Sources */,
 				C9533BAE2698E8FD0058B0CF /* CyberCatData.swift in Sources */,
 				C976F8C22697C7110068CC8D /* CyberCatCalVC.swift in Sources */,
 				C976F8BE2697C7110068CC8D /* AppDelegate.swift in Sources */,
@@ -373,6 +389,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C92D4791269A2E9400236276 /* XCRemoteSwiftPackageReference "time" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/davedelong/time";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C92D4792269A2E9400236276 /* Time */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C92D4791269A2E9400236276 /* XCRemoteSwiftPackageReference "time" */;
+			productName = Time;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C976F8B22697C7110068CC8D /* Project object */;
 }
