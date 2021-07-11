@@ -9,7 +9,7 @@ import Foundation
 
 struct CatManager {
     
-    var cyberCatArray = [String]()
+    var catArray = [String]()
     
     // Output -> String
     func getCatImage() {
