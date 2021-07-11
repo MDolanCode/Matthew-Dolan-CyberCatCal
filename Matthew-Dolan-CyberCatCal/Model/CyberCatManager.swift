@@ -9,6 +9,8 @@ import Foundation
 
 struct CyberCatManager {
     
+    var cyberCatArray = [String]()
+    
     // Output -> String
     func getCatImage() {
         let urlString = "https://api.thecatapi.com/v1/images/search"
