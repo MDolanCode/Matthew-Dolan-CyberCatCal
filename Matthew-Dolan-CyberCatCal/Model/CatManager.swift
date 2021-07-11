@@ -1,5 +1,5 @@
 //
-//  CyberCatManager.swift
+//  CatManager.swift
 //  Matthew-Dolan-CyberCatCal
 //
 //  Created by Matt Dolan External macOS on 2021-07-09.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CyberCatManager {
+struct CatManager {
     
     var cyberCatArray = [String]()
     
@@ -43,7 +43,7 @@ struct CyberCatManager {
         let decoder = JSONDecoder()
         
         do {
-            let decodeData = try decoder.decode([CyberCatData].self, from: data)
+            let decodeData = try decoder.decode([CatData].self, from: data)
             
             let catImage = decodeData.first?.url
             print(catImage!)

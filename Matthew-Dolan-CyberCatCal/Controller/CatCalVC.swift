@@ -1,5 +1,5 @@
 //
-//  CyberCatCalVC.swift
+//  CatCalVC.swift
 //  Matthew-Dolan-CyberCatCal
 //
 //  Created by Matt Dolan External macOS on 2021-07-08.
@@ -7,14 +7,18 @@
 
 import UIKit
 
-class CyberCatCalVC: UIViewController {
+class CatCalVC: UIViewController {
     
     var cyberCatManager = CyberCatManager()
     
+    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationBar.barTintColor = .white
+        
         tableView.register(CatCalTableViewCell.nib(), forCellReuseIdentifier: CatCalTableViewCell.identifier)
         
         tableView.dataSource = self
@@ -24,7 +28,7 @@ class CyberCatCalVC: UIViewController {
     }
 }
 
-extension CyberCatCalVC: UITableViewDataSource {
+extension CatCalVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 7
     }
@@ -37,7 +41,7 @@ extension CyberCatCalVC: UITableViewDataSource {
     }
 }
 
-extension CyberCatCalVC: UITableViewDelegate {
+extension CatCalVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
