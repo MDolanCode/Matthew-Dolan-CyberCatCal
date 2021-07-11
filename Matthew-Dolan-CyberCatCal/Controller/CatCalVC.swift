@@ -9,7 +9,7 @@ import UIKit
 
 class CatCalVC: UIViewController {
     
-    var cyberCatManager = CyberCatManager()
+    var catManager = CatManager()
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
@@ -18,13 +18,13 @@ class CatCalVC: UIViewController {
         super.viewDidLoad()
         
         navigationBar.barTintColor = .white
-        
+        view.backgroundColor = .cyan
         tableView.register(CatCalTableViewCell.nib(), forCellReuseIdentifier: CatCalTableViewCell.identifier)
         
         tableView.dataSource = self
         tableView.delegate = self
         
-        cyberCatManager.getCatImage()
+        catManager.getCatImage()
     }
 }
 
