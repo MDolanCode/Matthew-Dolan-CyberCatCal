@@ -56,7 +56,7 @@ class CatCalVC: UIViewController {
         
         displayables = zip(days, cats).map { date, cat in
             CellDisplayable(
-                backgroundColor: date == today ? .blue : .white,
+                backgroundColor: date == today ? .systemIndigo : .white,
                 textColor: date == today ? .white : .black,
                 text: dateFormatter.string(from: date),
                 currentDay: date == today,
