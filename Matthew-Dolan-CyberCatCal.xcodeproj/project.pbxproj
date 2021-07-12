@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		C92D4798269A5B7D00236276 /* CatCalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92D4796269A5B7D00236276 /* CatCalTableViewCell.swift */; };
 		C92D4799269A5B7D00236276 /* CatCalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C92D4797269A5B7D00236276 /* CatCalTableViewCell.xib */; };
-		C9533BAE2698E8FD0058B0CF /* CatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9533BAD2698E8FD0058B0CF /* CatData.swift */; };
-		C9533BB52698EA0C0058B0CF /* CatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9533BB42698EA0C0058B0CF /* CatManager.swift */; };
+		C9533BAE2698E8FD0058B0CF /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9533BAD2698E8FD0058B0CF /* Cat.swift */; };
 		C9545638269B7B91005C4DF7 /* CellDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9545637269B7B91005C4DF7 /* CellDisplayable.swift */; };
 		C976F8BE2697C7110068CC8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C976F8BD2697C7110068CC8D /* AppDelegate.swift */; };
 		C976F8C02697C7110068CC8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C976F8BF2697C7110068CC8D /* SceneDelegate.swift */; };
@@ -23,8 +22,7 @@
 /* Begin PBXFileReference section */
 		C92D4796269A5B7D00236276 /* CatCalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCalTableViewCell.swift; sourceTree = "<group>"; };
 		C92D4797269A5B7D00236276 /* CatCalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatCalTableViewCell.xib; sourceTree = "<group>"; };
-		C9533BAD2698E8FD0058B0CF /* CatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatData.swift; sourceTree = "<group>"; };
-		C9533BB42698EA0C0058B0CF /* CatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatManager.swift; sourceTree = "<group>"; };
+		C9533BAD2698E8FD0058B0CF /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		C9545637269B7B91005C4DF7 /* CellDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CellDisplayable.swift; path = "Matthew-Dolan-CyberCatCal/Controller/CellDisplayable.swift"; sourceTree = SOURCE_ROOT; };
 		C976F8BA2697C7110068CC8D /* Matthew-Dolan-CyberCatCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Matthew-Dolan-CyberCatCal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C976F8BD2697C7110068CC8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,8 +48,7 @@
 		C9533BB02698E9070058B0CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C9533BB42698EA0C0058B0CF /* CatManager.swift */,
-				C9533BAD2698E8FD0058B0CF /* CatData.swift */,
+				C9533BAD2698E8FD0058B0CF /* Cat.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,9 +179,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9545638269B7B91005C4DF7 /* CellDisplayable.swift in Sources */,
-				C9533BB52698EA0C0058B0CF /* CatManager.swift in Sources */,
 				C92D4798269A5B7D00236276 /* CatCalTableViewCell.swift in Sources */,
-				C9533BAE2698E8FD0058B0CF /* CatData.swift in Sources */,
+				C9533BAE2698E8FD0058B0CF /* Cat.swift in Sources */,
 				C976F8C22697C7110068CC8D /* CatCalVC.swift in Sources */,
 				C976F8BE2697C7110068CC8D /* AppDelegate.swift in Sources */,
 				C976F8C02697C7110068CC8D /* SceneDelegate.swift in Sources */,
