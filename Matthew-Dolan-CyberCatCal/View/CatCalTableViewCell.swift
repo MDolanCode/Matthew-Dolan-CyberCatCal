@@ -35,6 +35,7 @@ class CatCalTableViewCell: UITableViewCell {
         catImageView.image = nil
     }
     
+    // MARK: - Configure Cell Displayable
     func configure(displayable: CellDisplayable) {
         task = URLSession.shared.dataTask(with: URLRequest(url: displayable.url)) { [catImageView] data, _, _ in
             if let data = data {
