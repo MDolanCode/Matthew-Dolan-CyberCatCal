@@ -11,4 +11,5 @@ struct CellDisplayable {
     let backgroundColor: UIColor
     let textColor: UIColor
     let currentDay: Bool
+    let url: URL
 }
