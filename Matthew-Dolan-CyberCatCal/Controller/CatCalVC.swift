@@ -17,7 +17,6 @@ class CatCalVC: UIViewController {
         return result
     }()
     
-    // MARK: - Global Variables
     var displayables = [CellDisplayable]()
     
     // MARK: - IBOutlets
@@ -34,15 +33,12 @@ class CatCalVC: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        // URLSession
+        // MARK: - URLSession
         URLSession.shared.dataTask(with: URLRequest(url: URL(string: "https://api.thecatapi.com/v1/images/search?limit=7")!), completionHandler: { data, _, error in
             if let data = data {
                 let cats = try! JSONDecoder().decode([Cat].self, from: data)
                 DispatchQueue.main.async {
                     self.configureCells(cats: cats)
-                    
-                    // Debug console to show
-                    print(cats)
                 }
             }
             else {
