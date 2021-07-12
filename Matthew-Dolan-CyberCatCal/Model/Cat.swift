@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct CatData: Codable {
-    let url: String?
+struct Cat: Decodable {
+    let url: URL
 }
