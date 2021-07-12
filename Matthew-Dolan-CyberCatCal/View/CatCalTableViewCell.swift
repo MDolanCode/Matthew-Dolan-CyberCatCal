@@ -12,6 +12,8 @@ class CatCalTableViewCell: UITableViewCell {
     @IBOutlet weak var catImageView: UIImageView!
     @IBOutlet weak var calendarLabel: UILabel!
     
+    var task: URLSessionTask?
+    
     static let identifier = "CatCalTableViewCell"
     
     static func nib() -> UINib {
@@ -24,5 +26,26 @@ class CatCalTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    // MARK: - PrepareForReuse
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        task?.cancel()
+        catImageView.image = nil
+    }
+    
+    func configure(displayable: CellDisplayable) {
+        task = URLSession.shared.dataTask(with: URLRequest(url: displayable.url)) { [catImageView] data, _, _ in
+            if let data = data {
+                DispatchQueue.main.async {
+                    self.backgroundColor = displayable.backgroundColor
+                    self.calendarLabel.textColor = displayable.textColor
+                    self.calendarLabel.text = displayable.text
+                    catImageView?.image = UIImage(data: data)
+                }
+            }
+        }
+        task!.resume()
     }
 }
