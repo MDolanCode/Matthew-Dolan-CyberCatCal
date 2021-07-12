@@ -10,6 +10,7 @@ import UIKit
 struct CellDisplayable {
     let backgroundColor: UIColor
     let textColor: UIColor
+    let text: String
     let currentDay: Bool
     let url: URL
 }
