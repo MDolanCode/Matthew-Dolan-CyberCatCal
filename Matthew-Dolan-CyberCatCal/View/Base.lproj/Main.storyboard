@@ -23,7 +23,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHj-ja-l1k">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Cyber Cat Calendar" id="rSw-GL-ssc"/>
+                                    <navigationItem title="CyberCat Calendar" id="rSw-GL-ssc"/>
                                 </items>
                             </navigationBar>
                         </subviews>
