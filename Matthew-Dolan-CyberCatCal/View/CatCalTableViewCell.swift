@@ -29,6 +29,8 @@ class CatCalTableViewCell: UITableViewCell {
     }
     
     // MARK: - PrepareForReuse
+    // To cancel the download if the cell gets reused before the download completed
+    // and to remove the old image.
     override func prepareForReuse() {
         super.prepareForReuse()
         task?.cancel()
@@ -36,9 +38,11 @@ class CatCalTableViewCell: UITableViewCell {
     }
     
     // MARK: - Configure Cell Displayable
+    // Downloads the images and puts them into an array of [catImageView].
     func configure(displayable: CellDisplayable) {
         task = URLSession.shared.dataTask(with: URLRequest(url: displayable.url)) { [catImageView] data, _, _ in
             if let data = data {
+                // Sets the UI for the cells.
                 DispatchQueue.main.async {
                     self.backgroundColor = displayable.backgroundColor
                     self.calendarLabel.textColor = displayable.textColor

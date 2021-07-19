@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// Sets struct for UI parameters
 struct CellDisplayable {
     let backgroundColor: UIColor
     let textColor: UIColor

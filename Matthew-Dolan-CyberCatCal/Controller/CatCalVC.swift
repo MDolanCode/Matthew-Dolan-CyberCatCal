@@ -10,6 +10,8 @@ import UIKit
 class CatCalVC: UIViewController {
     
     // MARK: - Date Formatter
+    
+    // Formats the date with the full date, but no time.
     let dateFormatter: DateFormatter = {
         let result = DateFormatter()
         result.dateStyle = .full
@@ -34,6 +36,7 @@ class CatCalVC: UIViewController {
         tableView.delegate = self
         
         // MARK: - URLSession
+        // URLSession to make a networking request to the API, and decode the JSON.
         URLSession.shared.dataTask(with: URLRequest(url: URL(string: "https://api.thecatapi.com/v1/images/search?limit=7")!), completionHandler: { data, _, error in
             if let data = data {
                 let cats = try! JSONDecoder().decode([Cat].self, from: data)
@@ -49,11 +52,16 @@ class CatCalVC: UIViewController {
     
     // MARK: - Configure Cells
     func configureCells(cats: [Cat]) {
+        // Get calendar date and sets the week.
         let calendar = Calendar(identifier: .iso8601)
         let startOfWeek = calendar.dateComponents([.calendar, .yearForWeekOfYear, .weekOfYear], from: Date()).date!
+        // Returns an array of 7 days
         let days = (0..<7).compactMap { calendar.date(byAdding: .day, value: $0, to: startOfWeek)  }
         let today = calendar.startOfDay(for: Date())        
         
+        // zip is used to combine two different arrays into a single array.
+        // Organizes the UI to be displayed.
+        // Sets all parameters into an array. 
         displayables = zip(days, cats).map { date, cat in
             CellDisplayable(
                 backgroundColor: date == today ? .systemIndigo : .white,
@@ -78,6 +86,7 @@ extension CatCalVC: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CatCalTableViewCell.identifier, for: indexPath) as! CatCalTableViewCell
         
+        // Loads cells with the UI.
         let displayable = displayables[indexPath.row]        
         cell.configure(displayable: displayable)
         

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// Sets struct for decoding the JSON Cat images.
 struct Cat: Decodable {
     let url: URL
 }
