@@ -28,8 +28,6 @@ class CatCalVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationBar.barTintColor = .white
-        
         tableView.register(CatCalTableViewCell.nib(), forCellReuseIdentifier: CatCalTableViewCell.identifier)
         
         tableView.dataSource = self
