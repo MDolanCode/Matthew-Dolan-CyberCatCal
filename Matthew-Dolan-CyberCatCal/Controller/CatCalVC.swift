@@ -37,9 +37,13 @@ class CatCalVC: UIViewController {
         // URLSession to make a networking request to the API, and decode the JSON.
         URLSession.shared.dataTask(with: URLRequest(url: URL(string: "https://api.thecatapi.com/v1/images/search?limit=7")!), completionHandler: { data, _, error in
             if let data = data {
-                let cats = try! JSONDecoder().decode([Cat].self, from: data)
-                DispatchQueue.main.async {
-                    self.configureCells(cats: cats)
+                do {
+                    let cats = try JSONDecoder().decode([Cat].self, from: data)
+                    DispatchQueue.main.async {
+                        self.configureCells(cats: cats)
+                    }
+                } catch {
+                    print(error)
                 }
             }
             else {
