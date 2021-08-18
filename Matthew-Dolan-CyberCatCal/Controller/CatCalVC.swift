@@ -65,7 +65,7 @@ class CatCalVC: UIViewController {
         
         // zip is used to combine two different arrays into a single array.
         // Organizes the UI to be displayed.
-        // Sets all parameters into an array. 
+        // Sets all parameters into an array.
         displayables = zip(days, cats).map { date, cat in
             CellDisplayable(
                 backgroundColor: date == today ? .systemIndigo : .white,
