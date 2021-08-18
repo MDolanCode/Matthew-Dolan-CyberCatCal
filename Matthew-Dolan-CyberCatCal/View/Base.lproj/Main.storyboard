@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CyberCat Cal-->
+        <!--Cybercat Calendar-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CatCalVC" customModule="Matthew_Dolan_CyberCatCal" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <constraint firstItem="gG0-ey-Duy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mdQ-Nu-7Vd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="CyberCat Cal" id="cvs-77-oaQ"/>
+                    <navigationItem key="navigationItem" title="Cybercat Calendar" id="cvs-77-oaQ"/>
                     <connections>
                         <outlet property="tableView" destination="gG0-ey-Duy" id="ttr-x2-CEg"/>
                     </connections>
