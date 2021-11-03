@@ -1,4 +1,4 @@
-# Matthew-Dolan-CyberCatCal
+# CyberCatCal
 Cat Calendar
 
 * Download or clone repo then run.
